@@ -1,0 +1,62 @@
+/* ------------------------- */
+/* Reset e variáveis básicas */
+:root{
+  --cor-primaria:#0b5cff;
+  --cor-secundaria:#f4f6fb;
+  --texto:#222;
+  --muted:#666;
+  --container-w:1100px;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color:var(--texto);
+  margin:0;
+  line-height:1.5;
+  background:#fff;
+}
+.container{max-width:var(--container-w);margin:0 auto;padding:1rem}
+
+/* Cabeçalho */
+.cabecalho{background:linear-gradient(90deg,var(--cor-primaria),#0060d6);color:#fff;padding:2rem 0}
+.cabecalho-conteudo{display:flex;align-items:center;gap:1.25rem}
+.foto-perfil{width:96px;height:96px;border-radius:50%;border:3px solid rgba(255,255,255,0.2)}
+.nome{font-size:1.8rem;margin:0}
+.tagline{margin:.25rem 0;color:rgba(255,255,255,0.9)}
+.navegacao{margin-top:.5rem}
+.navegacao a{color:rgba(255,255,255,0.95);text-decoration:none;margin-right:1rem;font-weight:600}
+.navegacao a:hover{opacity:.9;text-decoration:underline}
+.botao{background:#fff;color:var(--cor-primaria);padding:.45rem .75rem;border-radius:6px}
+.botao:hover{opacity:.95}
+
+/* Seções */
+.secao{padding:2.25rem 0}
+.sobre{background:var(--cor-secundaria)}
+h2{font-size:1.4rem;margin:0 0 .75rem}
+p{margin:0 0 1rem}
+
+/* Habilidades */
+.lista-habilidades{display:flex;flex-wrap:wrap;gap:.5rem 1rem;list-style:none;padding:0;margin:0}
+.lista-habilidades li{background:#fff;border:1px solid #e6e9ef;padding:.5rem .75rem;border-radius:6px;color:var(--muted)}
+
+/* Projetos - cards com flex */
+.cards-projetos{display:flex;gap:1rem;flex-wrap:wrap}
+.card-projeto{background:#fff;border:1px solid #e6e9ef;padding:1rem;border-radius:8px;flex:1 1 260px;box-shadow:0 1px 4px rgba(16,24,40,0.03)}
+.card-projeto h3{margin-top:0;margin-bottom:.5rem}
+.card-projeto a{color:var(--cor-primaria);text-decoration:none}
+.card-projeto a:hover{text-decoration:underline}
+
+/* Contato */
+.contato a{color:var(--cor-primaria)}
+
+/* Rodapé */
+.rodape{background:#f7f8fb;border-top:1px solid #eee;padding:1rem 0;text-align:center;color:var(--muted)}
+
+/* Responsivo simples */
+@media (max-width:720px){
+  .cabecalho-conteudo{flex-direction:column;align-items:flex-start}
+  .cards-projetos{flex-direction:column}
+}
+
+/* Fim do arquivo */
